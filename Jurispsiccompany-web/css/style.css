@@ -1,0 +1,159 @@
+
+/*
+    Azul oscuro principal: #042D5F
+    Azul claro secundario: #1272B2
+    Verde claro de acento: #129A94
+    Gris claro para fondo: #F8F9FA
+    Negro para texto: #333333
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    background-color: #F8F9FA;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #042D5F; 
+    text-align: center;
+}
+
+a {
+    text-decoration: none; 
+    color: #1272B2; 
+}
+
+a:hover {
+    color: #129A94; 
+}
+
+header {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+header .logo img {
+    height: 120px; 
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    font-weight: bold;
+    color: #042D5F;
+    transition: color 0.3s ease;
+}
+
+
+.hero {
+    /*background: url('images/fondo-hero.jpg') no-repeat center center/cover; */
+    background-color: #042D5F; 
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.cta-button {
+    background-color: #129A94; /* Color verde de acento para el botón */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1272B2; /* Cambia a azul claro al pasar el mouse */
+}
+
+/* ---------------------------------- */
+/* ESTILOS DE SECCIONES      */
+/* ---------------------------------- */
+section {
+    padding: 60px 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.about-us-summary {
+    text-align: center;
+}
+
+/* ---------------------------------- */
+/* ESTILOS DE LAS CARDS      */
+/* ---------------------------------- */
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* ---------------------------------- */
+/* ESTILOS DEL FOOTER          */
+/* ---------------------------------- */
+footer {
+    background-color: #042D5F;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
