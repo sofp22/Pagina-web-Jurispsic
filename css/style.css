@@ -45,7 +45,7 @@ header {
 }
 
 header .logo img {
-    height: 120px; 
+    height: 110px; 
 }
 
 header nav ul {
@@ -68,7 +68,8 @@ header nav ul li a {
     background-color: #042D5F; 
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 100px 50px;
+    
 }
 
 .hero h1 {
@@ -104,10 +105,37 @@ section {
     text-align: center;
 }
 
+/* Sección de Quiénes Somos (resumen) */
 .about-us-summary {
+    padding: 60px 20px;
+    max-width: 960px;
+    margin: 0 auto;
     text-align: center;
 }
 
+/* Título más grande */
+.about-us-summary h2 {
+    font-size: 2.5em; /* Un tamaño de fuente mayor para que resalte */
+    margin-bottom: 20px;
+}
+
+/* Párrafo centrado y justificado */
+.about-us-summary p {
+    text-align: justify; /* Justifica el texto para que se vea más formal */
+    margin: 0 auto;
+    max-width: 800px; /* Limita el ancho del párrafo para que la justificación se vea mejor */
+}
+/* Ajuste en la sección del resumen */
+.about-us-summary .link-to-page {
+    margin-top: 40px; /* Incrementa el margen superior para bajar el enlace */
+    display: inline-block;
+}
+
+/* Estilos para la sección de Nuestros Servicios */
+.services-summary h2 {
+    font-size: 2.5em; /* Aumenta el tamaño del título */
+    margin-bottom: 30px; /* Añade espacio debajo del título */
+}
 
 .service-cards {
     display: flex;
@@ -134,6 +162,12 @@ section {
 
 .card h3 {
     margin-top: 0;
+    margin-bottom: 0; /* Elimina el margen inferior del título */
+}
+
+/* Oculta los párrafos dentro de las tarjetas */
+.service-cards .card p {
+    display: none;
 }
 
 
@@ -163,7 +197,7 @@ footer {
 .allies-section {
     padding: 60px 20px;
     text-align: center;
-    background-color: white; /* Un fondo blanco para que resalten los logos */
+    /*background-color:#1272B2;*/ /* Un fondo blanco para que resalten los logos */
 }
 
 .allies-logos {
@@ -178,16 +212,17 @@ footer {
 .allies-logos img {
     max-height: 80px; /* Tamaño máximo para los logos */
     width: auto;
-    filter: grayscale(100%); /* Hace los logos grises para una apariencia más limpia */
-    opacity: 0.6; /* Un poco de transparencia */
-    transition: all 0.3s ease;
+    height: 150px;
+    width: 180px;
+    object-fit: contain;
 }
-
-.allies-logos img:hover {
-    filter: grayscale(0%); /* Vuelve a los colores originales al pasar el mouse */
-    opacity: 1;
+.allies-big-logo img {
+    max-height: 120px; /* Tamaño máximo para el logo más grande */
+    width: auto;
+    height: 190px;
+    width: 220px;
+    object-fit: contain;
 }
-
 @media (max-width: 768px) {
     .allies-logos {
         flex-direction: column;
