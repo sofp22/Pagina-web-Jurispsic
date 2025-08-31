@@ -7,6 +7,9 @@
     Negro para texto: #333333
 */
 
+/* ---------------------------------- */
+/* ESTILOS GLOBALES - BASE DEL SITIO */
+/* ---------------------------------- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -30,11 +33,13 @@ a:hover {
     color: #129A94; 
 }
 
-p{
+p {
     text-align: center;
-    
 }
 
+/* ---------------------------------- */
+/* ENCABEZADO Y PIE DE PÁGINA */
+/* ---------------------------------- */
 header {
     background-color: white;
     padding: 10px 20px;
@@ -45,7 +50,7 @@ header {
 }
 
 header .logo img {
-    height: 110px; 
+    height: 60px; /* Tamaño del logo ajustado para reducir espacio */
 }
 
 header nav ul {
@@ -62,14 +67,35 @@ header nav ul li a {
     transition: color 0.3s ease;
 }
 
+footer {
+    background-color: #042D5F;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+/* ---------------------------------- */
+/* ESTILOS ESPECÍFICOS DE LA PÁGINA DE INICIO (INDEX.HTML) */
+/* ---------------------------------- */
 .hero {
-    /*background: url('images/fondo-hero.jpg') no-repeat center center/cover; */
     background-color: #042D5F; 
     color: white;
     text-align: center;
-    padding: 100px 50px;
-    
+    padding: 60px 20px; /* Padding ajustado para reducir espacio */
 }
 
 .hero h1 {
@@ -97,15 +123,6 @@ header nav ul li a {
     background-color: #1272B2; 
 }
 
-
-section {
-    padding: 60px 20px;
-    max-width: 960px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* Sección de Quiénes Somos (resumen) */
 .about-us-summary {
     padding: 60px 20px;
     max-width: 960px;
@@ -113,28 +130,25 @@ section {
     text-align: center;
 }
 
-/* Título más grande */
 .about-us-summary h2 {
-    font-size: 2.5em; /* Un tamaño de fuente mayor para que resalte */
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-/* Párrafo centrado y justificado */
 .about-us-summary p {
-    text-align: justify; /* Justifica el texto para que se vea más formal */
+    text-align: justify;
     margin: 0 auto;
-    max-width: 800px; /* Limita el ancho del párrafo para que la justificación se vea mejor */
+    max-width: 800px;
 }
-/* Ajuste en la sección del resumen */
+
 .about-us-summary .link-to-page {
-    margin-top: 40px; /* Incrementa el margen superior para bajar el enlace */
+    margin-top: 40px;
     display: inline-block;
 }
 
-/* Estilos para la sección de Nuestros Servicios */
 .services-summary h2 {
-    font-size: 2.5em; /* Aumenta el tamaño del título */
-    margin-bottom: 30px; /* Añade espacio debajo del título */
+    font-size: 2.5em;
+    margin-bottom: 30px;
 }
 
 .service-cards {
@@ -162,42 +176,17 @@ section {
 
 .card h3 {
     margin-top: 0;
-    margin-bottom: 0; /* Elimina el margen inferior del título */
+    margin-bottom: 0;
 }
 
-/* Oculta los párrafos dentro de las tarjetas */
 .service-cards .card p {
     display: none;
 }
 
-
-footer {
-    background-color: #042D5F;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-.social-media a {
-    color: white;
-    margin: 0 10px;
-    font-size: 1.2em;
-}
-/* ---------------------------------- */
-/* ESTILOS DE LA SECCIÓN ALIADOS */
-/* ---------------------------------- */
 .allies-section {
     padding: 60px 20px;
     text-align: center;
-    /*background-color:#1272B2;*/ /* Un fondo blanco para que resalten los logos */
+    background-color: white;
 }
 
 .allies-logos {
@@ -205,32 +194,23 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 40px; /* Espacio entre los logos */
+    gap: 40px;
     margin-top: 40px;
 }
 
 .allies-logos img {
-    max-height: 80px; /* Tamaño máximo para los logos */
+    max-height: 80px;
     width: auto;
-    height: 150px;
-    width: 180px;
-    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
 }
-.allies-big-logo img {
-    max-height: 120px; /* Tamaño máximo para el logo más grande */
-    width: auto;
-    height: 190px;
-    width: 220px;
-    object-fit: contain;
+
+.allies-logos img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
 }
-@media (max-width: 768px) {
-    .allies-logos {
-        flex-direction: column;
-    }
-}
-/* ---------------------------------- */
-/* ESTILOS DE LA SECCIÓN DE UBICACIÓN */
-/* ---------------------------------- */
+
 .location-section {
     padding: 60px 20px;
     text-align: center;
@@ -275,9 +255,165 @@ footer {
     width: 100%;
     height: 100%;
 }
+
 /* ---------------------------------- */
-/* ESTILOS ESPECÍFICOS PARA servicios.html */
+/* ESTILOS ESPECÍFICOS PARA PÁGINAS INTERNAS (nosotros.html, equipo.html, servicios.html) */
 /* ---------------------------------- */
+.page-content {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.page-content h1 {
+    text-align: center;
+    color: #042D5F;
+    font-size: 3em;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.page-content h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #129A94;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Estilos para nosotros.html */
+.history-section {
+    padding: 30px 0;
+    margin-bottom: 60px;
+}
+
+.history-text {
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333333;
+}
+
+.mission-vision-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.mv-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    flex: 1 1 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 5px solid transparent;
+}
+
+.mv-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    border-bottom-color: #129A94;
+}
+
+.mv-card h3 {
+    color: #042D5F;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.mv-card p,
+.mv-card ul {
+    font-size: 1em;
+    line-height: 1.7;
+    color: #555555;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+.mv-card ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.mv-card li {
+    padding-left: 1.5em;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.mv-card li::before {
+    content: "✅";
+    color: #129A94;
+    position: absolute;
+    left: 0;
+    font-size: 0.9em;
+    line-height: 1.7;
+}
+
+/* Estilos para equipo.html */
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.member-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #1272B2;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.member-card img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #129A94;
+    box-shadow: 0 0 0 6px rgba(18, 154, 148, 0.2);
+}
+
+.member-card h3 {
+    margin: 0;
+    color: #042D5F;
+    font-size: 1.8em;
+}
+
+.member-card h4 {
+    margin: 5px 0 15px;
+    color: #1272B2;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.member-card p {
+    font-size: 1em;
+    line-height: 1.7;
+    color: #555555;
+    text-align: justify;
+}
+
+/* Estilos para servicios.html */
 .service-intro {
     font-size: 1.2em;
     text-align: center;
@@ -322,8 +458,19 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Media Queries para diseño responsive */
+/* ---------------------------------- */
+/* MEDIA QUERIES PARA RESPONSIVIDAD */
+/* ---------------------------------- */
 @media (max-width: 768px) {
+    .page-content h1 {
+        font-size: 2.5em;
+    }
+    .mission-vision-container {
+        flex-direction: column;
+    }
+    .team-members {
+        grid-template-columns: 1fr;
+    }
     .service-item {
         flex-direction: column !important;
         text-align: center;
