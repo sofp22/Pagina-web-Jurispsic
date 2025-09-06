@@ -1,15 +1,12 @@
 
 /*
-    Azul oscuro principal: #042D5F
-    Azul claro secundario: #1272B2
-    Verde claro de acento: #129A94
-    Gris claro para fondo: #F8F9FA
-    Negro para texto: #333333
+    Azul oscuro: #042D5F
+    Azul claro : #1272B2
+    Verde claro : #129A94
+    Gris claro : #F8F9FA
+    Negro : #333333
 */
 
-/* ---------------------------------- */
-/* ESTILOS GLOBALES - BASE DEL SITIO */
-/* ---------------------------------- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -33,13 +30,10 @@ a:hover {
     color: #129A94; 
 }
 
-p {
-    text-align: center;
-}
 
-/* ---------------------------------- */
-/* ENCABEZADO Y PIE DE PÁGINA */
-/* ---------------------------------- */
+/* ---------------------------------- 
+header y footer
+---------------------------------- */
 header {
     background-color: white;
     padding: 10px 20px;
@@ -50,7 +44,7 @@ header {
 }
 
 header .logo img {
-    height: 60px; /* Tamaño del logo ajustado para reducir espacio */
+    height: 100px; 
 }
 
 header nav ul {
@@ -95,7 +89,7 @@ footer {
     background-color: #042D5F; 
     color: white;
     text-align: center;
-    padding: 60px 20px; /* Padding ajustado para reducir espacio */
+    padding: 60px 20px; 
 }
 
 .hero h1 {
@@ -111,14 +105,13 @@ footer {
 }
 
 .cta-button {
-    background-color: #129A94; 
+    background-color: #1272B2; 
     color: white;
     padding: 15px 30px;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
-
 .cta-button:hover {
     background-color: #1272B2; 
 }
@@ -186,7 +179,7 @@ footer {
 .allies-section {
     padding: 60px 20px;
     text-align: center;
-    background-color: white;
+    /*background-color: white*/;
 }
 
 .allies-logos {
@@ -201,14 +194,19 @@ footer {
 .allies-logos img {
     max-height: 80px;
     width: auto;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: all 0.3s ease;
+/* height: 150px;
+    width: 180px;
+    object-fit: contain;*/
 }
 
-.allies-logos img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
+.allies-big-logo img {
+
+    max-height: 120px; 
+    width: auto;
+    height: 190px;
+    width: 220px;
+    object-fit: contain;
+
 }
 
 .location-section {
@@ -256,9 +254,7 @@ footer {
     height: 100%;
 }
 
-/* ---------------------------------- */
-/* ESTILOS ESPECÍFICOS PARA PÁGINAS INTERNAS (nosotros.html, equipo.html, servicios.html) */
-/* ---------------------------------- */
+
 .page-content {
     max-width: 1000px;
     margin: 60px auto;
@@ -309,10 +305,10 @@ footer {
 .mv-card {
     background-color: #FFFFFF;
     border-radius: 12px;
-    padding: 30px;
+    padding: 50px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     flex: 1 1 280px;
-    text-align: center;
+    text-align: justify;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-bottom: 5px solid transparent;
 }
@@ -416,7 +412,7 @@ footer {
 /* Estilos para servicios.html */
 .service-intro {
     font-size: 1.2em;
-    text-align: center;
+    text-align: justify;
     max-width: 800px;
     margin: 0 auto 60px;
     color: #555;
@@ -444,7 +440,7 @@ footer {
 
 .service-text {
     flex: 1;
-    text-align: left;
+    text-align: justify;
 }
 
 .service-text h2 {
@@ -458,9 +454,6 @@ footer {
     margin-bottom: 20px;
 }
 
-/* ---------------------------------- */
-/* MEDIA QUERIES PARA RESPONSIVIDAD */
-/* ---------------------------------- */
 @media (max-width: 768px) {
     .page-content h1 {
         font-size: 2.5em;
