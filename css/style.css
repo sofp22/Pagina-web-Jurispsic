@@ -30,7 +30,6 @@ a:hover {
     color: #129A94; 
 }
 
-
 /* ---------------------------------- 
 header y footer
 ---------------------------------- */
@@ -452,6 +451,88 @@ footer {
 .service-text p {
     font-size: 1.1em;
     margin-bottom: 20px;
+}
+
+/* estilos contacto.html */
+.contact-section h1::after {
+    background-color: #129A94;
+}
+
+.contact-intro {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+    color: #555;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+}
+
+.contact-info, .contact-form-container {
+    flex: 1 1 450px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.contact-info {
+    text-align: left;
+    border-left: 5px solid #129A94;
+}
+
+.contact-info h2 {
+    text-align: left;
+    color: #042D5F;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    text-align: left;
+    margin: 15px 0;
+    color: #555;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #042D5F;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #1272B2;
+    outline: none;
+}
+
+.contact-form button.cta-button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
