@@ -367,7 +367,7 @@ footer {
     background-color: white;
     border-radius: 12px;
     padding: 30px;
-    text-align: center;
+    text-align: Center;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-top: 5px solid #1272B2;
@@ -392,6 +392,7 @@ footer {
     margin: 0;
     color: #042D5F;
     font-size: 1.8em;
+    text-align: center;
 }
 
 .member-card h4 {
@@ -399,6 +400,7 @@ footer {
     color: #1272B2;
     font-weight: normal;
     font-style: italic;
+    text-align: center
 }
 
 .member-card p {
