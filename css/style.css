@@ -419,40 +419,79 @@ footer {
     color: #555;
 }
 
-.service-item {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 60px;
+
+.service-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
 }
 
-.service-item:nth-child(odd) {
-    flex-direction: row-reverse;
+
+.service-card-item {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    overflow: hidden; /* Esto asegura que la imagen no se salga de los bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-item img {
+.service-card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.card-image img {
     width: 100%;
-    max-width: 450px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    height: 300px;
+    object-fit: cover; /* Para que la imagen cubra el espacio sin deformarse */
 }
 
-.service-text {
-    flex: 1;
-    text-align: justify;
+.card-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.service-text h2 {
-    text-align: left;
+.card-content h2 {
+    font-size: 1.8em;
     color: #042D5F;
-    margin-top: 0;
+    margin-bottom: 15px;
 }
 
-.service-text p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
+.card-content p,
+.card-content ul {
+    flex-grow: 1; /* Permite que el contenido se estire para llenar el espacio */
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.card-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.card-content ul li {
+    margin-bottom: 8px;
+}
+
+.card-content .cta-button {
+    margin-top: auto; /* Empuja el botón hacia la parte inferior de la tarjeta */
+}
+
+/* Media Query para responsividad en móviles */
+@media (max-width: 768px) {
+    .service-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-content p,
+    .card-content ul {
+        text-align: left;
+    }
 }
 
 /* estilos contacto.html */
