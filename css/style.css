@@ -23,11 +23,8 @@ h1, h2, h3 {
 
 a {
     text-decoration: none; 
-    color: #1272B2; 
-}
-
-a:hover {
-    color: #129A94; 
+    color: #1272B2;
+    
 }
 
 /* ---------------------------------- 
@@ -111,9 +108,9 @@ footer {
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
-.cta-button:hover {
+/*.cta-button:hover {
     background-color: #1272B2; 
-}
+}*/
 
 .about-us-summary {
     padding: 60px 20px;
@@ -346,7 +343,7 @@ footer {
 }
 
 .mv-card li::before {
-    content: "✅";
+    content: " •";
     color: #129A94;
     position: absolute;
     left: 0;
@@ -419,13 +416,11 @@ footer {
     color: #555;
 }
 
-
 .service-cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
 }
-
 
 .service-card-item {
     background-color: white;
@@ -433,6 +428,9 @@ footer {
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     overflow: hidden; /* Esto asegura que la imagen no se salga de los bordes redondeados */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Esto es clave para el nuevo diseño */
+    flex-direction: column;
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
 }
 
 .service-card-item:hover {
@@ -443,7 +441,7 @@ footer {
 .card-image img {
     width: 100%;
     height: 300px;
-    object-fit: cover; /* Para que la imagen cubra el espacio sin deformarse */
+    object-fit: cover; 
 }
 
 .card-content {
@@ -480,6 +478,7 @@ footer {
 
 .card-content .cta-button {
     margin-top: auto; /* Empuja el botón hacia la parte inferior de la tarjeta */
+    text-align: center;
 }
 
 /* Media Query para responsividad en móviles */
