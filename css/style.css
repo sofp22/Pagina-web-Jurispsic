@@ -593,3 +593,50 @@ footer {
         text-align: center;
     }
 }
+
+/* --- ESTILOS PARA EL MENÚ RESPONSIVO --- */
+
+nav {
+    display: block;
+    width: auto; 
+}
+
+nav ul {
+    display: flex; 
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* --- MEDIA QUERY PARA MÓVILES --- */
+@media (max-width: 768px) {
+    nav {
+        display: none; 
+        position: absolute;
+        top: 60px; 
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 20px;
+        z-index: 50;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: #042D5F;
+    }
+
+    nav ul {
+        flex-direction: column; 
+        
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}
