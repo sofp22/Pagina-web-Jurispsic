@@ -82,12 +82,46 @@ footer {
 /* index.html */
 
 .hero {
-    background-color: #042D5F; 
+    background: url('../images/indexPhoto.jpg') no-repeat center center/cover; 
+    /*background-color: #042D5F; */
     color: white;
     text-align: center;
     padding: 60px 20px; 
+    position: relative;
+    height: 80vh; /* alto completo de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 45, 95, 0.6); /* azul oscuro con opacidad */
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
 }
 
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #0d6efd; /* azul más vivo */
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover {
+  background: #0b5ed7;
+}
 .hero h1 {
     color: white;
     font-size: 3em;
@@ -591,5 +625,52 @@ footer {
     }
     .service-text h2 {
         text-align: center;
+    }
+}
+
+/* --- ESTILOS PARA EL MENÚ RESPONSIVO --- */
+
+nav {
+    display: block;
+    width: auto; 
+}
+
+nav ul {
+    display: flex; 
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* --- MEDIA QUERY PARA MÓVILES --- */
+@media (max-width: 768px) {
+    nav {
+        display: none; 
+        position: absolute;
+        top: 60px; 
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 20px;
+        z-index: 50;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: #042D5F;
+    }
+
+    nav ul {
+        flex-direction: column; 
+        
+    }
+
+    nav li {
+        margin: 10px 0;
     }
 }

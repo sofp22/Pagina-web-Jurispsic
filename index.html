@@ -15,7 +15,12 @@
         <div class="logo">
             <img src="images/logo-jurispic.png" alt="Logo de JuriSPSIC">
         </div>
-        <nav>
+
+        <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
+        <span class="hamburger"></span>
+    </button>
+
+        <nav id ="main-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
@@ -26,13 +31,14 @@
         </nav>
     </header>
 
-    <main class="hero">
+    <section class="hero">
+        <div class="overlay"></div>
         <div class="hero-content">
             <h1>Soluciones Legales y Psicológicas a tu Alcance</h1>
             <p>Construyendo soluciones jurídicas de la mano con la psicología para tu bienestar integral.</p>
             <a href="contacto.html" class="cta-button">¡Contáctanos Ahora!</a>
         </div>
-    </main>
+    </section>
 
     <section class="about-us-summary">
         <h2>¿Por qué JuriSPSIC?</h2>
@@ -96,6 +102,6 @@
             </div>
         </div>
     </footer>
-
+<script src="js/script.js"></script>
 </body>
 </html>
