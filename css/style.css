@@ -58,18 +58,99 @@ header nav ul li a {
 }
 
 footer {
-    background-color: #042D5F;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    padding: 60px 20px 20px;
 }
 
-.footer-content {
+.footer-container {
     display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */
     justify-content: space-between;
-    align-items: center;
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1; /* Las columnas se estirarán para ocupar el espacio */
+    min-width: 200px; /* Asegura que no se hagan muy pequeñas */
+}
+
+.footer-logo img {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-column h4 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #fff;
+    border-bottom: 2px solid #1272B2;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-column p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #1272B2;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+}
+
+.social-links a img {
+    width: 30px;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+/* Media Query para móviles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
 }
 
 .social-media a {
