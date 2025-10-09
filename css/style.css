@@ -16,7 +16,7 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1, h2, h3 {    
     color: #042D5F; 
     text-align: center;
 }
@@ -27,9 +27,6 @@ a {
     
 }
 
-/* ---------------------------------- 
-header y footer
----------------------------------- */
 header {
     background-color: white;
     padding: 10px 20px;
@@ -164,7 +161,6 @@ footer {
 
 .hero {
     background: url('../images/indexPhoto.jpg') no-repeat center center/cover; 
-    /*background-color: #042D5F; */
     color: white;
     text-align: center;
     padding: 60px 20px; 
@@ -389,6 +385,56 @@ footer {
     margin: 15px auto 0;
     border-radius: 2px;
 }
+
+/* --- ESTILOS PARA LA SECCIÓN DE TESTIMONIOS (Galería de Imágenes) --- */
+
+/* ... (mantén los estilos de .testimonials-section, h2, p y .testimonials-grid) ... */
+.testimonials-section {
+    padding: 80px 20px;
+    /*background-color: #f0f8ff; /* Fondo azul muy claro */
+    text-align: center; /* Centra el texto y el contenedor principal */
+}
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.testimonial-image-container img {
+    width: 100%;
+    height: 100%; 
+    display: block;
+    object-fit: contain; 
+}
+
+.testimonial-image-container {
+    
+    height: 250px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    
+    /* ... (resto de estilos de contenedor) ... */
+}
+
+.testimonial-cta {
+    margin-top: 20px;
+}
+
+/* Media Query para móviles */
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .testimonial-image-container {
+        height: 300px; /* Un poco más alto en móviles si lo deseas */
+    }
+}
+
 
 /* Estilos para nosotros.html */
 .history-section {
@@ -754,4 +800,31 @@ nav ul {
     nav li {
         margin: 10px 0;
     }
+}
+/* --- ESTILOS PARA LOS MENSAJES DE ESTADO DEL FORMULARIO --- */
+#form-message-status {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease;
+}
+
+#form-message-status.show {
+    opacity: 1; /* Visible cuando tiene la clase 'show' */
+}
+
+/* Estilo para mensaje de éxito */
+.success {
+    background-color: #129A94; /* Verde de acento */
+    border: 1px solid #0d7974;
+}
+
+/* Estilo para mensaje de error */
+.error {
+    background-color: #e74c3c; /* Rojo para error */
+    border: 1px solid #c0392b;
 }
