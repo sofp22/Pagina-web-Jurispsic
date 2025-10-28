@@ -34,6 +34,7 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    position: relative;
 }
 
 header .logo img {
@@ -144,6 +145,10 @@ footer {
         flex-direction: column;
     }
 
+    header{
+        padding: 10px 15px;
+    }
+
     .footer-column {
         min-width: 100%;
         margin-bottom: 30px;
@@ -171,13 +176,13 @@ footer {
     align-items: center;
 }
 .hero .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(4, 45, 95, 0.6); /* azul oscuro con opacidad */
-  z-index: 1;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(4, 45, 95, 0.6); /* azul oscuro con opacidad */
+z-index: 1;
 }
 .hero-content {
   position: relative;
@@ -219,9 +224,6 @@ footer {
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
-/*.cta-button:hover {
-    background-color: #1272B2; 
-}*/
 
 .about-us-summary {
     padding: 60px 20px;
@@ -301,9 +303,6 @@ footer {
 .allies-logos img {
     max-height: 80px;
     width: auto;
-/* height: 150px;
-    width: 180px;
-    object-fit: contain;*/
 }
 
 .allies-big-logo img {
@@ -386,13 +385,11 @@ footer {
     border-radius: 2px;
 }
 
-/* --- ESTILOS PARA LA SECCIÓN DE TESTIMONIOS (Galería de Imágenes) --- */
-
 /* ... (mantén los estilos de .testimonials-section, h2, p y .testimonials-grid) ... */
 .testimonials-section {
     padding: 80px 20px;
     /*background-color: #f0f8ff; /* Fondo azul muy claro */
-    text-align: center; /* Centra el texto y el contenedor principal */
+    text-align: center; 
 }
 .testimonials-grid {
     display: grid;
@@ -416,8 +413,6 @@ footer {
     justify-content: center;
     align-items: center;
     overflow: hidden; 
-    
-    /* ... (resto de estilos de contenedor) ... */
 }
 
 .testimonial-cta {
@@ -431,10 +426,9 @@ footer {
         gap: 20px;
     }
     .testimonial-image-container {
-        height: 300px; /* Un poco más alto en móviles si lo deseas */
+        height: 300px; 
     }
 }
-
 
 /* Estilos para nosotros.html */
 .history-section {
@@ -458,7 +452,6 @@ footer {
     gap: 30px;
     margin-top: 40px;
 }
-
 .mv-card {
     background-color: #FFFFFF;
     border-radius: 12px;
@@ -757,6 +750,15 @@ footer {
 
 /* --- ESTILOS PARA EL MENÚ RESPONSIVO --- */
 
+.hamburger {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #042D5F; /* Color Azul Oscuro de tu marca */
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
 nav {
     display: block;
     width: auto; 
@@ -783,6 +785,23 @@ nav ul {
         z-index: 50;
     }
 
+    #main-nav {
+        display: none; 
+        position: absolute;
+        top: 60px; /* Ajusta este valor si tu logo es más alto */
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 20px;
+        z-index: 50;
+        border-radius: 0 0 8px 8px;
+        border: 1px solid #ddd;
+    }
+
+    #main-nav.active {
+        display: block;
+    }
+
     nav.active {
         display: block;
     }
@@ -790,6 +809,7 @@ nav ul {
     .menu-toggle {
         display: block;
         background-color: #042D5F;
+        margin-right: 15px;
     }
 
     nav ul {
@@ -799,6 +819,24 @@ nav ul {
 
     nav li {
         margin: 10px 0;
+    }
+
+    #main-nav ul {
+        flex-direction: column;
+        text-align: right; /* Alinea los enlaces a la derecha */
+        list-style: none;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    #main-nav li {
+        margin: 10px 0;
+    }
+
+    #main-nav ul li a{
+        padding: 10px 20px;
+        display: block;
+        text-align: right;
     }
 }
 /* --- ESTILOS PARA LOS MENSAJES DE ESTADO DEL FORMULARIO --- */
@@ -819,8 +857,8 @@ nav ul {
 
 /* Estilo para mensaje de éxito */
 .success {
-    background-color: #129A94; /* Verde de acento */
-    border: 1px solid #0d7974;
+    background-color: #11d217; /* Verde de acento */
+    border: 1px solid #15cc3c;
 }
 
 /* Estilo para mensaje de error */
